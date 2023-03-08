@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": [
+      "ES2017",
+      "DOM"
+    ],
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "rootDirs": [
+      "./src",
+      "./public"
+    ],
+    "types": [
+      "react"
+    ],
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "skipLibCheck": true,
+    "emitDeclarationOnly": false,
+    "incremental": true,
+    "tsBuildInfoFile": "/Users/flavindias/Development/front-end/ts/estudo/reactjs-boilerplate/node_modules/vitest/dist/tsconfig.tmp.tsbuildinfo"
+  },
+  "include": [
+    "src/**/*",
+    "public/*",
+    "global.d.ts"
+  ],
+  "exclude": [
+    "./dist"
+  ]
+}

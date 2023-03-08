@@ -1,23 +1,33 @@
 {
   "name": "reactjs-boilerplate",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:flavindias/reactjs-boilerplate.git",
   "author": "Flaviano Dias <flavindias@msn.com>",
   "license": "MIT",
-  "source": "src/index.ts",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel src/public/index.html",
+    "build": "parcel build src/public/index.html",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "typecheck": "vitest typecheck",
+    "lint": "eslint",
+    "check": "tsc --noEmit",
+    "ci": "yarn build && yarn test && yarn lint && yarn check"
   },
   "devDependencies": {
+    "@parcel/compressor-brotli": "^2.8.3",
+    "@parcel/compressor-gzip": "^2.8.3",
+    "@parcel/config-default": "^2.8.3",
     "@parcel/transformer-typescript-tsc": "^2.8.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@vitest/coverage-c8": "^0.29.2",
+    "eslint": "^8.35.0",
     "parcel": "^2.8.3",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "vitest": "^0.29.2"
   },
   "dependencies": {
     "react": "^18.2.0",
