@@ -6,33 +6,45 @@
   "author": "Flaviano Dias <flavindias@msn.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/public/index.html",
-    "build": "parcel build src/public/index.html",
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "typecheck": "vitest typecheck",
     "lint": "eslint",
     "check": "tsc --noEmit",
-    "ci": "yarn build && yarn test && yarn lint && yarn check"
+    "ci": "yarn build && yarn test && yarn lint && yarn check",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.0",
     "@parcel/compressor-brotli": "^2.8.3",
     "@parcel/compressor-gzip": "^2.8.3",
     "@parcel/config-default": "^2.8.3",
     "@parcel/transformer-typescript-tsc": "^2.8.3",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "@vitest/coverage-c8": "^0.29.2",
+    "babel-loader": "^8.3.0",
     "eslint": "^8.35.0",
     "parcel": "^2.8.3",
     "process": "^0.11.10",
-    "vitest": "^0.29.2"
+    "vitest": "^0.29.2",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^4.9.5"
+    "react-dom": "^18.2.0"
   },
   "alias": {
     "process": {
