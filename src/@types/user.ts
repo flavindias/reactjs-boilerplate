@@ -10,6 +10,9 @@ const User = z.object({
   updatedAt: z.string()
 });
 
+const SafeUser = User.omit({ password: true });
+
+export type SafeUser = z.infer<typeof SafeUser>;
 export type User = z.infer<typeof User>;
 
 

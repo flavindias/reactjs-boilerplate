@@ -3,9 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <title>React Boilerplate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        line-height: 1.5;
+        color: #121212;
+      }
+      #app {
+        display: flex;
+        height: 100%;
+        width: 100%;
+      }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+    </style>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="index.tsx"></script>
   </body>
+  
 </html>
