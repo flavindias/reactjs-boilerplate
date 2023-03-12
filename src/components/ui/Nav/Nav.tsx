@@ -12,7 +12,7 @@ export interface NavProps {
     items: NavLinkProps[];
 }
   
-export const Nav: React.FC<NavProps> = ({items}: NavProps) => {
+export const Nav: React.FC<NavProps> = ({items = []}: NavProps) => {
     const [renderItems, setRenderItems] = useState(items);
     const setActive = (index: number) => {
         const newItems = items.map(item => {items.indexOf(item) === index ? item.active = true : item.active = false;  return item});

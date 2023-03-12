@@ -66,7 +66,7 @@ export interface ButtonProps {
     onClick: () => void;
 }
 
-export const Button = ({label, mode, size, disabled, outline, onClick}: ButtonProps) => {
+export const Button = ({label, mode, size, disabled, outline = false, onClick}: ButtonProps) => {
     const isDisabled = disabled ? 'disabled' : '';
     const isOutline = outline ? 'outline' : '';
     return (

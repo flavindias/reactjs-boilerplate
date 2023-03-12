@@ -28,5 +28,5 @@ Email.args = {
 export const Password = Template.bind({});
 Password.args = {
     label: "Password",
-    type: "password",
+    type: "password"
 };
