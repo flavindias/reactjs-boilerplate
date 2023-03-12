@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, NavLinkProps }  from "../NavLink";
 import styled from "styled-components";
 
@@ -13,17 +13,23 @@ export interface NavProps {
 }
   
 export const Nav: React.FC<NavProps> = ({items}: NavProps) => {
+    const [renderItems, setRenderItems] = useState(items);
+    const setActive = (index: number) => {
+        const newItems = items.map(item => {items.indexOf(item) === index ? item.active = true : item.active = false;  return item});
+        setRenderItems(newItems);
+    }
+
     return (
         <NavContainer>
             {
-                items.map((item, index) => {
+                renderItems.map((item, index) => {
                     return (
                         <NavLink
                             key={index}
-                            active={index === 0}
+                            active={item.active}
                             title={item.title}
                             icon={item.icon}
-                            onClick={item.onClick}
+                            onClick={() => {setActive(index); item.onClick;}}
                         />
                     );
                 })

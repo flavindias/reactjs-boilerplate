@@ -18,7 +18,7 @@ const NavLinkItem = styled.a<{active: boolean}>`
     background-color: ${props => props.active ? "white" : "transparent"};
     
     :hover {
-        background: #aec9d4;
+        background-color: white;
     }
     
     :before {
@@ -31,7 +31,6 @@ const NavLinkItem = styled.a<{active: boolean}>`
         /* UI Properties */
         background: #002E54 0% 0% no-repeat padding-box;
         border-radius: 6px 0px 0px 6px;
-        
     }
 `;
 const Title = styled.span<{active: boolean}>`
