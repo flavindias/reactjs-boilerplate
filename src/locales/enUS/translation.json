@@ -1,0 +1,8 @@
+{
+    "root.sidebar.dashboard.title": "Dashboard",
+    "root.sidebar.batteryOps.title": "Battery Operations",
+    "root.sidebar.alerts.title": "Alerts",
+    "root.sidebar.serviceOrders.title": "Service Orders",
+    "root.sidebar.software.title": "Software",
+    "root.sidebar.listsAndRegisters.title": "Lists and Registers"
+}
