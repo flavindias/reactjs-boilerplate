@@ -1,45 +1,67 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
+// import { useTranslation, Trans } from "react-i18next";
+import { Sidebar } from "../../components/ui/Sidebar";
+import i18n from '../../i18n';
 
+const menu = {
+  items: [
+      {
+          title: i18n.t('root.sidebar.dashboard.title'),
+          icon: "home",
+          onClick: () => {},
+          active: true,
+          to: "dashboard"
+      },
+      {
+          title: i18n.t('root.sidebar.batteryOps.title'),
+          icon: "user",
+          onClick: () => {},
+          active: false,
+          to: "batteryOps"
+      },
+      {
+          title: i18n.t('root.sidebar.alerts.title'),
+          icon: "cog",
+          onClick: () => {},
+          active: false,
+          to: "alerts"
+      },
+      {
+          title: i18n.t('root.sidebar.serviceOrders.title'),
+          icon: "sign-out-alt",
+          onClick: () => {},
+          active: false,
+          to: "os"
+      },
+      {
+        title: i18n.t('root.sidebar.software.title'),
+        icon: "sign-out-alt",
+        onClick: () => {},
+        active: false,
+        to: "software"
+    },
+    {
+      title: i18n.t('root.sidebar.listsAndRegisters.title'),
+      icon: "sign-out-alt",
+      onClick: () => {},
+      active: false,
+      to: "lists"
+  },
+  ]
+};
+
+const logo = {
+  src: "https://via.placeholder.com/150",
+  alt: "Logo"
+}
 export const Root = () => {
     return (
       <>
-        <div id="sidebar">
-          <h1>React Router Contacts</h1>
-          <div>
-            <form id="search-form" role="search">
-              <input
-                id="q"
-                aria-label="Search contacts"
-                placeholder="Search"
-                type="search"
-                name="q"
-              />
-              <div
-                id="search-spinner"
-                aria-hidden
-                hidden={true}
-              />
-              <div
-                className="sr-only"
-                aria-live="polite"
-              ></div>
-            </form>
-            <form method="post">
-              <button type="submit">New</button>
-            </form>
-          </div>
-          <nav>
-            <ul>
-              <li>
-                <a href={`/contacts/1`}>Your Name</a>
-              </li>
-              <li>
-                <a href={`/contacts/2`}>Your Friend</a>
-              </li>
-            </ul>
-          </nav>
+        <Sidebar menu={menu} logo={logo} />
+        <div id="detail">
+          <Outlet />
         </div>
-        <div id="detail"></div>
       </>
     );
   }

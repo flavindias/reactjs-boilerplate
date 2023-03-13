@@ -18,25 +18,29 @@ const menu = {
             title: "Home",
             icon: "home",
             onClick: () => {},
-            active: true
+            active: true,
+            to: ""
         },
         {
             title: "Profile",
             icon: "user",
             onClick: () => {},
-            active: false
+            active: false,
+            to: ""
         },
         {
             title: "Settings",
             icon: "cog",
             onClick: () => {},
-            active: false
+            active: false,
+            to: ""
         },
         {
             title: "Logout",
             icon: "sign-out-alt",
             onClick: () => {},
-            active: false
+            active: false,
+            to: ""
         }
     ]
 };

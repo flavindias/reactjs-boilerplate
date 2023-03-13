@@ -21,13 +21,15 @@ Default.args = {
             active: true,
             title: "Dashboard",
             icon: "home",
-            onClick: () => {}
+            onClick: () => {},
+            to: "dashboard"
         },
         {
             active: false,
             title: "Home",
             icon: "home",
-            onClick: () => {}
+            onClick: () => {},
+            to: "home"
         },
     ]
 };

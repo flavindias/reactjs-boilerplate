@@ -10,11 +10,12 @@ const InputContainer = styled.div`
     background-color: #fff;
     align-items: center;
     height: 32px;
+    box-shadow: 0px 3px 6px #8B91A614;
 `;
 
 const Label = styled.label`
     font-family: 'Open Sans', sans-serif;
-    font-weight: '600';
+    font-weight: 600;
     font-size: 14px;
     color: #4a4f5c;
     flex-grow: 0.3;
@@ -30,7 +31,7 @@ const InputField = styled.input`
     justify-content: center;
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
-    font-weight: '600';
+    font-weight: 600;
     font-size: 14px;
     text-decoration: none;
     border: none;

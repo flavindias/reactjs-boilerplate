@@ -30,6 +30,8 @@ export const Nav: React.FC<NavProps> = ({items = []}: NavProps) => {
                             title={item.title}
                             icon={item.icon}
                             onClick={() => {setActive(index); item.onClick;}}
+                            to={item.to}
+
                         />
                     );
                 })

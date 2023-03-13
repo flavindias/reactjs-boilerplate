@@ -1,29 +1,34 @@
 import React from 'react';
-import {
-    createBrowserRouter,
-    RouterProvider,
-  } from "react-router-dom";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from './routes/Home';
-import { About } from './routes/About';
+import { Alerts } from './routes/Alerts';
 import { Users } from './routes/Users';
 import { Login } from './routes/Login';
+import { Root } from './routes/Root';
 import { RecoverPass } from './routes/RecoverPass';
 import { ErrorPage } from './routes/ErrorPage';
+import './i18n';
 
 const router = createBrowserRouter([
     {
-      path: "/",
-      element: <Home />,
-      errorElement: <ErrorPage />,
+        path: "/",
+        element: <Root />,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "alerts",
+                element: <Alerts />
+            },
+        ],
     },
     {
-        path: "/about",
-        element: <About />,
+        path: "home",
+        element: <Home />,
         errorElement: <ErrorPage />,
     },
+    
     {
-        path: "/users",
+        path: "users",
         element: <Users />,
         errorElement: <ErrorPage />,
     },

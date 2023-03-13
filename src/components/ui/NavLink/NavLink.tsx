@@ -1,20 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const NavLinkItem = styled.a<{active: boolean}>`
+const NavLinkItem = styled(Link)<{active: boolean}>`
     display: flex;
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
-    
     white-space: pre;
-    
     color: inherit;
     text-decoration: none;
     height: 56px;
     margin-top: 5px;
-
     background-color: ${props => props.active ? "white" : "transparent"};
     
     :hover {
@@ -52,11 +50,12 @@ export interface NavLinkProps {
     title: string;
     icon: string;
     onClick: () => void;
+    to: string;
   }
   
-export const NavLink: React.FC<NavLinkProps> = ({active, title, icon, onClick}: NavLinkProps) => {
+export const NavLink: React.FC<NavLinkProps> = ({active, to, title, icon, onClick}: NavLinkProps) => {
     return (
-        <NavLinkItem active={active} onClick={onClick}>
+        <NavLinkItem to={to} active={active} onClick={onClick}>
             <Icon active={active} className={icon} />
             <Title active={active}>{title}</Title>
         </NavLinkItem>
